@@ -1,52 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding: 15px 30px;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Logo Styling */
-#navbar .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-#navbar .logo span {
-  color: #4caf50;
-}
-
-/* Navigation Links */
-.nav-links ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #4caf50;
-}
-
-
-
-
-
-
 body {
     font-family: Arial, sans-serif;
     background: #f9f9f9;

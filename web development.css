@@ -1,9 +1,191 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+:root {
+  --color-1: #333; /* Navbar background color */
+  --text-color: #eaeaea;
+  --button-color: #388e3c; /* Menu button color */
+  --overlay-color: #333(100, 100, 100, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-family: 'Poppins', Arial, sans-serif;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
-    color: #333;
+
+  background: #f9f9f9;
+  color: #333;
+}
+
+nav {
+  height: 70px;
+  background-color: var(--color-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  /* Ensure the navbar is always visible */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Ensures it stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Optional for better appearance */
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 200px;
+  width: auto;
+}
+
+/* Navigation Links */
+.links-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav a {
+  padding: 0 15px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #4caf50;
+}
+
+/* Buttons */
+.menu-buttons .btn {
+  margin-left: 15px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 25px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.menu-buttons .btn:hover {
+  background-color: var(--button-color);
+  color: #fff;
+}
+
+.btn.secondary {
+  background-color: #555;
+}
+
+.btn.secondary:hover {
+  background-color: #777;
+}
+
+/* Sidebar for Small Screens */
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.open-sidebar-button svg {
+  fill: var(--button-color);
+  transition: transform 0.3s ease;
+}
+
+#overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 280px;
+    height: 100%;
+
+    background-color: var(--color-1);
+    box-shadow: -5px 0 15px #333(107, 107, 107);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav a {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 25px;
+    justify-content: flex-start;
+    font-size: 1rem;
+  }
+
+  .menu-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .menu-buttons .btn {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .open-sidebar-button,
+  .close-sidebar-button {
+    display: block;
+  }
+
+  #sidebar-active:checked~.links-container {
+    right: 0;
+    transform: translateX(0);
+  }
+
+  #sidebar-active:checked~#overlay {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--overlay-color);
+    z-index: 9;
+  }
+
+  #sidebar-active:checked+.open-sidebar-button {
+    display: none;
+  }
 }
 
 
@@ -13,7 +195,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  color: #ffffff; /* Change to white for better contrast */
+  color: #ffffff;
+  /* Change to white for better contrast */
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -27,7 +210,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Add a dark overlay for better text visibility */
+  background: rgba(0, 0, 0, 0.4);
+  /* Add a dark overlay for better text visibility */
   z-index: 1;
 }
 
@@ -66,10 +250,11 @@ body {
 /* Fade-in Animation for Background */
 @keyframes fadeInBackground {
   from {
-      opacity: 0;
+    opacity: 0;
   }
+
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -78,84 +263,90 @@ body {
 
 /* Intro Section Styling */
 .intro-section {
-    padding: 4rem 2rem;
-    background: #ffffff;
-    text-align: center;
+  padding: 4rem 2rem;
+  background: #ffffff;
+  text-align: center;
 }
 
 .intro-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #000000;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #000000;
 }
 
 .intro-section .highlight {
-    color: #4caf50;
+  color: #4caf50;
 }
 
 .intro-section p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 2rem;
-    line-height: 1.6;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .services-container {
-  display: flex; /* Use flexbox layout */
-  flex-wrap: wrap; /* Allow items to wrap */
-  gap: 20px; /* Space between items */
-  justify-content: center; /* Center items in the container */
+  display: flex;
+  /* Use flexbox layout */
+  flex-wrap: wrap;
+  /* Allow items to wrap */
+  gap: 20px;
+  /* Space between items */
+  justify-content: center;
+  /* Center items in the container */
 }
 
 
 .service-card {
-    width: 350px;
-    padding: 1.5rem;
-    border-radius: 10px;
-    background: #f0f0f0;
-    text-align: center;
-    transition: transform 0.3s;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
+  width: 350px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: #f0f0f0;
+  text-align: center;
+  transition: transform 0.3s;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 .service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .service-card h3 {
-    font-size: 1.2rem;
-    color: #4caf50;
+  font-size: 1.2rem;
+  color: #4caf50;
 }
 
 .service-card p {
-    font-size: 0.95rem;
-    color: #666;
+  font-size: 0.95rem;
+  color: #666;
 }
 
 /* Animations */
 @keyframes fadeInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

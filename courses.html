@@ -1,100 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IT Solutions & Consultancy - Custom Website Development, AI/ML Models, Data Analysis, and Courses">
-  <meta name="keywords" content="IT solutions, website development, AI/ML, Data Analysis, Internship, Full stack web development, AutoCAD 3D Design">
-  <meta name="author" content="Your Company Name">
+  <meta name="description"
+    content="IT Solutions - Custom Website Development, AI/ML Models, Data Analysis, IoT Solutions">
+  <meta name="keywords"
+    content="IT solutions, website development, AI/ML, Data Analysis, Internship, Full stack web development, IoT Solutions">
+  <meta name="author" content="GenData Tech">
   <title>Internships</title>
 
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="courses.css">
   <link rel="stylesheet" href="index.css">
-  <link rel="icon" href="Images/Gen1.png" type="image/png">
+  <link rel="icon" href="image/Gen1.png" type="image/png">
   <script src="courses.js"></script>
   <script src="index.js"></script>
 </head>
 
 <body>
+  <header id="navbar" class="navbar">
     <nav>
-        <!-- Logo on the left -->
-        <div class="logo-container">
+      <!-- Logo on the left -->
+      <div class="logo-container">
+        <a href="index.html">
           <img src="image/Gen data tech-03.png" alt="Logo" class="logo">
-        </div>
-      
-        <!-- Menu button (hamburger) on the right -->
-        <input type="checkbox" id="sidebar-active">
-        <label for="sidebar-active" class="open-sidebar-button">
+        </a>
+      </div>
+    
+      <!-- Menu button (hamburger) on the right -->
+      <input type="checkbox" id="sidebar-active">
+      <label for="sidebar-active" class="open-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg>
+      </label>
+      <label id="overlay" for="sidebar-active"></label>
+    
+      <!-- Sidebar links -->
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-button">
           <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
-            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
           </svg>
         </label>
-        <label id="overlay" for="sidebar-active"></label>
-      
-        <!-- Sidebar links -->
-        <div class="links-container">
-          <label for="sidebar-active" class="close-sidebar-button">
-            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
-              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-            </svg>
-          </label>
-          <a href="index.html">Home</a>
-          <a href="sevices.html">Services</a>
-          <a href="courses.html">Internships</a>
-          
-          <div class="menu-buttons">
-            <a href="#contact" class="btn secondary">Contact Us</a>
-          </div>
+        <a href="index.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="courses.html">Internships</a>
+       
+        <div class="menu-buttons">
+          <a href="#contact" class="btn secondary">Contact Us</a>
         </div>
-      </nav>
+      </div>
+    </nav>
+  </header>
 
 
   <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="content">
-            <h1>Unlock<span class="highlight">Insights</span>with Data<br>Analysis</h1>
-            <p>Transform your business with our expert data analysis services. Discover 
-                <br>hidden trends and make informed decisions with precision and efficiency</p> 
-            <a href="#courses" class="btn">Explore Courses</a>
-        </div>
-    </section>
-
-    
- <!-- Courses Section -->
-<section id="courses">
-  <h2>Explore Our courses</h2>
-  <h3>Learn with Us</h3>
-  <p>Gain practical skills with our comprehensive courses designed for modern industry needs.</p>
-
-  <!-- Courses Container -->
-  <div class="courses">
-    <!-- Course Item 1 -->
-    <div class="course-item">
-      <img src="image/pexels-tranmautritam-326501.jpg" alt="Course 1 Image">
-      <h3>Full Stack Development</h3>
-      <p>Master the skills needed to build dynamic and responsive web applications.</p>
-      <a href="courses.html" download="Brochure" class="btn">Download</a>
+  <section class="hero-section">
+    <div class="content">
+      <h1>Unlock<span class="highlight">Insights</span>with Data<br>Analysis</h1>
+      <p>Transform your business with our expert data analysis services. Discover
+        <br>hidden trends and make informed decisions with precision and efficiency
+      </p>
+      <a href="#courses" class="btn">Explore Courses</a>
     </div>
+  </section>
 
-    <!-- Course Item 2 -->
-    <div class="course-item">
-      <img src="image/pexels-pavel-danilyuk-8294597.jpg" alt="Course 2 Image">
-      <h3>AI/ML</h3>
-      <p>Dive into machine learning and artificial intelligence with hands-on projects.</p>
-      <a href="courses.html" download="Brochure" class="btn">Download</a>
-    </div>
 
-    <!-- Course Item 3 -->
-    <div class="course-item">
-      <img src="image/pexels-goumbik-669610.jpg" alt="Course 3 Image">
-      <h3>Data Analysis</h3>
-      <p>Analyze data effectively and create insightful dashboards for decision-making.</p>
-      <a href="courses.html" download="Brochure" class="btn">Download</a>
+  <!-- Courses Section -->
+  <section id="courses">
+    <h2>Explore Our courses</h2>
+    <h3>Learn with Us</h3>
+    <p>Gain practical skills with our comprehensive courses designed for modern industry needs.</p>
+
+    <!-- Courses Container -->
+    <div class="courses">
+      <!-- Course Item 1 -->
+      <div class="course-item">
+        <img src="image/pexels-tranmautritam-326501.jpg" alt="Course 1 Image">
+        <h3>Full Stack Development</h3>
+        <p>Master the skills needed to build dynamic and responsive web applications.</p>
+        <a href="courses.html" download="Brochure" class="btn">Download</a>
+      </div>
+
+      <!-- Course Item 2 -->
+      <div class="course-item">
+        <img src="image/pexels-pavel-danilyuk-8294597.jpg" alt="Course 2 Image">
+        <h3>AI/ML</h3>
+        <p>Dive into machine learning and artificial intelligence with hands-on projects.</p>
+        <a href="courses.html" download="Brochure" class="btn">Download</a>
+      </div>
+
+      <!-- Course Item 3 -->
+      <div class="course-item">
+        <img src="image/pexels-goumbik-669610.jpg" alt="Course 3 Image">
+        <h3>Data Analysis</h3>
+        <p>Analyze data effectively and create insightful dashboards for decision-making.</p>
+        <a href="courses.html" download="Brochure" class="btn">Download</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -120,7 +128,7 @@
           <li>Interships</li>
         </ul>
       </div>
-  
+
       <!-- Social Media -->
       <div class="social-media">
         <h3>Follow Us</h3>
@@ -146,4 +154,5 @@
   </section>
 
 </body>
+
 </html>

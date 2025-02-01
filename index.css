@@ -542,11 +542,9 @@ nav a:hover {
 #get-in-touch {
   text-align: center;
   background-color: #f4f4f4;
-  padding: 60px 40px;
+  padding: 40px 20px; /* Reduced padding for smaller screens */
   border-radius: 10px;
-  margin-top: 3%;
-  margin-left: 15%;
-  margin-bottom: 3%;
+  margin: 3% auto; /* Center the section horizontally */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 900px;
   width: 90%; /* Ensures responsiveness */
@@ -554,10 +552,10 @@ nav a:hover {
 
 /* Heading Styling */
 #get-in-touch h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+  font-size: 2rem; /* Smaller font size for better readability on small screens */
+  margin-bottom: 20px; /* Reduced margin for smaller screens */
+  color: #333;
   display: flex;
-  color:#333;
   justify-content: center;
   flex-wrap: wrap; /* Ensures heading wraps on smaller screens */
 }
@@ -567,27 +565,27 @@ nav a:hover {
   color: #25D366; /* Green for emphasis */
 }
 
-
-
 /* Content Wrapper */
 .content-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 /* WhatsApp Logo */
 .whatsapp-logo {
   width: 50px;
+  height: auto; /* Ensures the logo maintains aspect ratio */
 }
 
 /* WhatsApp Link Styling */
 .whatsapp-link {
   background-color: #25D366;
   color: #fff;
-  font-size: 1.2rem;
-  padding: 15px 30px;
+  font-size: 1rem; /* Smaller font size for better fit on small screens */
+  padding: 12px 25px; /* Adjusted padding for smaller screens */
   border-radius: 50px;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -600,36 +598,50 @@ nav a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  #get-in-touch {
+    padding: 30px 15px; /* Further reduced padding for tablets */
+  }
+
   #get-in-touch h2 {
-    font-size: 2rem;
+    font-size: 1.8rem; /* Adjusted font size for tablets */
   }
 
   .content-wrapper {
-    flex-direction: column;
-    gap: 15px;
+    gap: 15px; /* Reduced gap for tablets */
   }
 
   .whatsapp-link {
-    font-size: 1rem;
-    padding: 12px 20px;
+    font-size: 0.9rem; /* Smaller font size for tablets */
+    padding: 10px 20px; /* Adjusted padding for tablets */
   }
 
   .whatsapp-logo {
-    width: 40px;
+    width: 40px; /* Smaller logo for tablets */
   }
 }
 
 @media (max-width: 480px) {
+  #get-in-touch {
+    padding: 20px 10px; /* Minimal padding for mobile devices */
+  }
+
+  #get-in-touch h2 {
+    font-size: 1.5rem; /* Smaller font size for mobile devices */
+  }
+
+  .content-wrapper {
+    gap: 10px; /* Minimal gap for mobile devices */
+  }
+
   .whatsapp-link {
-    font-size: 0.9rem;
-    padding: 10px 15px;
+    font-size: 0.8rem; /* Smaller font size for mobile devices */
+    padding: 8px 15px; /* Minimal padding for mobile devices */
   }
 
   .whatsapp-logo {
-    width: 35px;
+    width: 35px; /* Smaller logo for mobile devices */
   }
 }
-
 
 
 

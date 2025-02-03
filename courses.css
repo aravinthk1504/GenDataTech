@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: url('Images/img 13.jpg') no-repeat center center/cover; /* Replace 'your-image-path.jpg' with the path to your image */
+    background: url('../image/img3.jpg') no-repeat center center/cover; /* Replace 'your-image-path.jpg' with the path to your image */
     color: #ffffff; /* Change to white for better contrast */
     text-align: center;
     position: relative;
@@ -91,17 +91,12 @@
 #courses h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
-  color: #333;
+  color: #4caf50;
   margin-bottom: 10px;
   animation: fadeIn 1s ease forwards;
 }
 
-/* Subtitle Styling */
-#courses h3 {
-  font-size: 1.8rem;
-  color: #4caf50;
-  margin-bottom: 15px;
-}
+
 
 /* Paragraph Styling */
 #courses p {

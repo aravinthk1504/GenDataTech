@@ -46,6 +46,7 @@ nav {
 .logo {
   height: 200px;
   width: auto;
+  
 }
 
 /* Navigation Links */
@@ -679,6 +680,12 @@ nav a:hover {
   font-size: 2.2rem;
   margin-bottom: 20px;
   color: #4caf50;
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
 }
 
 .contact-info p {

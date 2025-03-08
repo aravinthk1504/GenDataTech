@@ -133,18 +133,6 @@ nav a:hover {
     transition: transform 0.3s ease-in-out;
   }
 
-  .logo-container {
-    display: flex;
-    align-items: lift;
-    flex-shrink: 0;
-  }
-  
-  .logo {
-    height: 200px;
-    width: auto;
-    
-  }
-
   nav a {
     box-sizing: border-box;
     width: 100%;

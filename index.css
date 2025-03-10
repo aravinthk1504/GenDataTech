@@ -182,12 +182,12 @@ nav a:hover {
   logo-container {
     justify-content: flex-start;
     width: 100%;
+    padding-left: 10px;
   }
 
   .logo {
     height: 100px; /* Adjust the height for mobile view */
     width: auto;
-    padding-left: 0px;
   }
 }
 

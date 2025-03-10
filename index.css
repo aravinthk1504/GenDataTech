@@ -391,6 +391,11 @@ nav a:hover {
   #vision-mission .mission-image img {
     max-width: 300px;
   }
+  #vision-mission .vision-content h2::after,
+  #vision-mission .mission-content h2::after {
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+  }
 }
 
 
